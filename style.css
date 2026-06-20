@@ -1,0 +1,434 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', sans-serif;
+    scroll-behavior: smooth;
+}
+
+body {
+    background: #12001f;
+    color: white;
+}
+
+/* HEADER */
+
+header {
+    background: #1a002c;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 8%;
+    position: sticky;
+    top: 0;
+    z-index: 999;
+}
+
+.logo-area {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.logo-area img {
+    width: 55px;
+    height: 55px;
+    border-radius: 50%;
+}
+
+.logo-area h1 {
+    font-size: 1.5rem;
+}
+
+/* MENU */
+
+nav a {
+    text-decoration: none;
+    color: white;
+    margin-left: 20px;
+    font-weight: 600;
+    transition: .3s;
+}
+
+nav a:hover {
+    color: #ffd700;
+}
+
+/* HERO / CARROSSEL */
+
+.hero {
+    height: 400px;
+    min-height: auto;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+
+    transition: background-image 1s ease-in-out;
+}
+
+.hero-content {
+    max-width: 700px;
+    padding: 20px;
+}
+
+.hero-logo {
+    width: 80px;
+    border-radius: 50%;
+    margin-bottom: 15px;
+    box-shadow: 0 0 20px rgba(255, 215, 0, .4);
+}
+
+.hero h1 {
+    font-size: 2.3rem;
+    margin-bottom: 10px;
+}
+
+.hero p {
+    font-size: 1rem;
+    color: #ddd;
+}
+
+/* BOTÕES */
+
+.hero-buttons {
+    margin-top: 25px;
+}
+
+.btn-whats,
+.btn-insta {
+    display: inline-block;
+    padding: 12px 22px;
+    border-radius: 40px;
+    text-decoration: none;
+    font-weight: bold;
+    margin: 8px;
+    transition: .3s;
+}
+
+.btn-whats {
+    background: #25D366;
+    color: white;
+}
+
+.btn-insta {
+    background: #E1306C;
+    color: white;
+}
+
+.btn-whats:hover,
+.btn-insta:hover {
+    transform: translateY(-3px);
+}
+
+/* SEÇÕES */
+
+section {
+    padding: 70px 10%;
+    text-align: center;
+}
+
+h2 {
+    font-size: 2.2rem;
+    margin-bottom: 30px;
+    color: #ffd700;
+}
+
+#sobre p {
+    max-width: 800px;
+    margin: auto;
+    line-height: 1.8;
+}
+
+/* CARDÁPIO */
+
+.cards {
+    display: flex;
+    justify-content: center;
+    gap: 25px;
+    flex-wrap: wrap;
+}
+
+.card {
+    background: #22003a;
+    padding: 30px;
+    width: 250px;
+    border-radius: 20px;
+    transition: .3s;
+}
+
+.card:hover {
+    transform: translateY(-8px);
+}
+
+.card h3 {
+    font-size: 2rem;
+    margin-bottom: 10px;
+}
+
+.card span {
+    display: block;
+    margin-top: 15px;
+    font-size: 1.4rem;
+    font-weight: bold;
+    color: #ffd700;
+}
+
+/* PROMOÇÃO */
+
+.titulo-copa {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 8px;
+}
+
+.taca-copa {
+    width: 22px;
+    height: auto;
+}
+
+.promo {
+    max-width: 500px;
+    margin: auto;
+    padding: 35px;
+    border-radius: 20px;
+
+    background: linear-gradient(45deg,
+            #6a0dad,
+            #b565f3);
+}
+
+.promo h3 {
+    font-size: 2rem;
+}
+
+.promo p {
+    margin: 15px 0;
+}
+
+.promo h1 {
+    font-size: 4rem;
+    color: #ffd700;
+}
+
+.promo span {
+    font-size: 1.2rem;
+    font-weight: bold;
+}
+
+/* AVALIAÇÕES */
+
+.reviews {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.review {
+    background: #22003a;
+    padding: 25px;
+    border-radius: 15px;
+    width: 300px;
+}
+
+.review p {
+    margin-top: 10px;
+}
+
+/* CONTATO */
+
+#contato p {
+    font-size: 1.2rem;
+    margin-top: 10px;
+}
+
+/* FOOTER */
+
+footer {
+    background: #0d0017;
+    padding: 25px;
+    text-align: center;
+}
+
+/* BOTÃO WHATSAPP */
+
+.whatsapp-float {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+
+    width: 65px;
+    height: 65px;
+
+    background: #25D366;
+    color: white;
+
+    border-radius: 50%;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    font-size: 32px;
+
+    text-decoration: none;
+
+    box-shadow: 0 0 15px rgba(0, 0, 0, .5);
+
+    z-index: 1000;
+}
+
+.whatsapp-float:hover {
+    transform: scale(1.1);
+}
+
+/* RESPONSIVO */
+
+@media(max-width:768px) {
+
+    header {
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    nav {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .hero {
+        height: 300px;
+    }
+
+    .hero-logo {
+        width: 70px;
+    }
+
+    .hero h1 {
+        font-size: 1.8rem;
+    }
+
+    .hero p {
+        font-size: 0.9rem;
+    }
+
+    .promo h1 {
+        font-size: 3rem;
+    }
+
+}
+
+/* =========================
+   FORMULÁRIO DE AVALIAÇÃO
+========================= */
+
+#avaliar {
+    padding: 70px 10%;
+    text-align: center;
+}
+
+#avaliar h2 {
+    color: #ffd700;
+    margin-bottom: 25px;
+}
+
+#form-avaliacao {
+    max-width: 600px;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+#form-avaliacao input,
+#form-avaliacao select,
+#form-avaliacao textarea {
+    width: 100%;
+    padding: 15px;
+    border: none;
+    border-radius: 12px;
+    font-size: 16px;
+    background: #22003a;
+    color: white;
+}
+
+#form-avaliacao input::placeholder,
+#form-avaliacao textarea::placeholder {
+    color: #ccc;
+}
+
+#form-avaliacao textarea {
+    height: 120px;
+    resize: none;
+}
+
+#form-avaliacao button {
+    background: #25D366;
+    color: white;
+    border: none;
+    padding: 15px;
+    border-radius: 12px;
+    font-size: 18px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+#form-avaliacao button:hover {
+    transform: translateY(-2px);
+    opacity: .9;
+}
+
+/* =========================
+   AVALIAÇÕES
+========================= */
+
+.reviews {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.review {
+    background: #22003a;
+    padding: 25px;
+    border-radius: 15px;
+    width: 300px;
+    transition: .3s;
+}
+
+.review:hover {
+    transform: translateY(-5px);
+}
+
+.review h3 {
+    margin: 10px 0;
+    color: #ffd700;
+}
+
+.review p {
+    line-height: 1.5;
+}
+
+/* RESPONSIVO */
+
+@media(max-width:768px) {
+
+    .review {
+        width: 100%;
+    }
+
+    #form-avaliacao {
+        width: 100%;
+    }
+
+}
